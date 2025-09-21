@@ -1,50 +1,81 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report:
+Version change: template → 1.0.0
+Modified principles: All template placeholders → concrete web app principles
+Added sections: Technology Stack, User Experience Standards
+Removed sections: None
+Templates requiring updates: ✅ constitution.md updated
+Follow-up TODOs: None
+-->
+
+# WhatADay Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. User-Centric Design
+Every feature MUST prioritize user experience and accessibility. Interface decisions must be validated through user testing or clear UX rationale. Mobile-first responsive design is mandatory. All interactions must be intuitive and provide clear feedback to users.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Modern Web Standards
+The application MUST use current web technologies and best practices. Progressive Web App (PWA) capabilities are required for offline functionality. Semantic HTML, ARIA labels, and WCAG 2.1 AA compliance are mandatory for accessibility.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Test-Driven Development (NON-NEGOTIABLE)
+TDD is mandatory: Tests written → User approved → Tests fail → Then implement. Red-Green-Refactor cycle strictly enforced. Unit tests for all business logic, integration tests for API endpoints, and E2E tests for critical user flows.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Performance & Scalability
+Core Web Vitals MUST meet Google's recommended thresholds. Initial page load under 3 seconds, interactive within 1.5 seconds. Code splitting and lazy loading required for optimal performance. Database queries must be optimized and cached appropriately.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Security First
+All user data MUST be protected with proper authentication and authorization. HTTPS everywhere, input validation, and protection against common vulnerabilities (OWASP Top 10). Regular security audits and dependency updates required.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Technology Stack
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### Frontend Requirements
+- Modern JavaScript framework (React/Vue/Svelte)
+- TypeScript for type safety
+- CSS framework or utility-first approach
+- Build tooling (Vite/Webpack)
+- Testing framework (Jest/Vitest + Testing Library)
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### Backend Requirements
+- Node.js/Python/Go runtime
+- RESTful API design
+- Database (PostgreSQL/MongoDB)
+- Authentication system (JWT/OAuth)
+- API documentation (OpenAPI/Swagger)
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## User Experience Standards
+
+### Design System
+- Consistent color palette and typography
+- Responsive breakpoints: mobile (320px+), tablet (768px+), desktop (1024px+)
+- Dark/light mode support
+- Loading states and error handling
+- Toast notifications for user feedback
+
+### Accessibility
+- WCAG 2.1 AA compliance
+- Keyboard navigation support
+- Screen reader compatibility
+- High contrast mode support
+- Focus management
+
+## Development Workflow
+
+### Code Quality
+- ESLint/Prettier for code formatting
+- Pre-commit hooks for quality checks
+- Code review required for all changes
+- Automated testing in CI/CD pipeline
+- Semantic versioning for releases
+
+### Documentation
+- README with setup instructions
+- API documentation
+- Component documentation
+- Deployment guides
+- Contributing guidelines
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+Constitution supersedes all other practices. Amendments require documentation, approval, and migration plan. All PRs/reviews must verify compliance with these principles. Complexity must be justified with clear rationale. Use this constitution for all development decisions and architectural choices.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-01-21 | **Last Amended**: 2025-01-21
